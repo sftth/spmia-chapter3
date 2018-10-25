@@ -17,8 +17,9 @@
 # redis.server: "redis"
 # redis.port: "6379"
 # signing.key: "345345fsdfsf5345"
+# expose all built-in endpoints (health, env, refresh and others) for testing
 management:
   endpoints:
     web:
       exposure:
-        include: env, health
+        include: "*"
